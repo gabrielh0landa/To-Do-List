@@ -1,7 +1,8 @@
 package aplicacao.todolist.model;
 import java.time.LocalDateTime;
 
-public class Tarefa {
+
+public class Tarefa implements Comparable<Tarefa> {
 
     private String nome;
     private String descricao;
@@ -66,6 +67,19 @@ public class Tarefa {
     public void setStatus(Status status) {
         this.status = status;
     }
+    
+    @Override
+	public String toString() {
+		return "Tarefa [nome=" + nome + ", descricao=" + descricao + ", dataDeTermino=" + dataDeTermino + ", categoria="
+				+ categoria + ", nivelPrioridade=" + nivelPrioridade + ", status=" + status + "]";
+	}
+
+	@Override
+    public int compareTo(Tarefa outraTarefa) {
+        return Integer.compare(outraTarefa.getNivelPrioridade().getValor(), this.getNivelPrioridade().getValor());
+    }
+    
+    
 }
 
 
