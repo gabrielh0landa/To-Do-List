@@ -16,14 +16,18 @@ public class FuncoesTarefa {
 		tarefas.add(novaTarefa);
 	}
 	
+	
 	public boolean deletarTarefa(String nomeTarefa) {
-		for(Tarefa tarefa : tarefas){
-		if(tarefa.getNome().equalsIgnoreCase(nomeTarefa)){
-			tarefas.remove(tarefa);
-			return true;
-			}
-		}
-		return false;
+	    for (int i = 0; i < tarefas.size(); i++) {
+	        Tarefa tarefa = tarefas.get(i);
+	        if (tarefa.getNome().equalsIgnoreCase(nomeTarefa)) {
+	            tarefas.remove(i);
+	            System.out.println("Tarefa deletada!");
+	            return true; 
+	        }
+	    }
+	    System.out.println("Tarefa não encontrada!");
+	    return false; 
 	}
 	
 	public void visualizarTarefa(String nomeTarefa) {
