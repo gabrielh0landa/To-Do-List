@@ -1,12 +1,17 @@
-# Eclipse
+# IDE files (IntelliJ IDEA)
+.idea/
+*.iml
+
+# IDE files (Eclipse)
 .classpath
 .project
 .settings/
+.metadata/
 
-# Arquivos de Compilação
+# Compiled files
 bin/
 *.class
 
-
-# Outros
+# Other temporary files
+*.jar
 .DS_Store
