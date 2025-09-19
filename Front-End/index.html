@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha To-Do List CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Minha Lista de Tarefas</h1>
+
+        <section class="task-management-form">
+            <input type="hidden" id="task-id"> 
+
+            <label for="task-name">Nome da Tarefa:</label>
+            <input type="text" id="task-name" placeholder="Nome breve da tarefa...">
+
+            <label for="task-description">Descrição:</label>
+            <textarea id="task-description" placeholder="Detalhes e notas sobre a tarefa..."></textarea>
+            
+            <label for="task-due-date">Prazo:</label>
+            <input type="datetime-local" id="task-due-date"> 
+            
+            <label for="task-category">Categoria:</label>
+            <select id="task-category">
+                <option value="Pessoal">Pessoal</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudos">Estudos</option>
+                <option value="Saude">Saúde</option>
+            </select>
+            
+            <label for="task-priority">Prioridade:</label>
+            <select id="task-priority">
+                <option value="Alta">Alta</option>
+                <option value="Média">Média</option>
+                <option value="Baixa">Baixa</option>
+            </select>
+
+            <button id="save-task-btn">Adicionar Tarefa</button>
+            <button id="cancel-edit-btn" style="display:none;">Cancelar Edição</button>
+        </section>
+
+        <hr>
+
+        <section class="task-filters">
+            <label for="filter-status">Filtrar por Status:</label>
+            <select id="filter-status">
+                <option value="all">Todas</option>
+                <option value="pendente">Pendente</option>
+                <option value="concluida">Concluída</option>
+            </select>
+
+             <label for="filter-category">Categoria:</label>
+             <select id="filter-category">
+                <option value="all">Todas</option>
+                <option value="Pessoal">Pessoal</option>
+                <option value="Trabalho">Trabalho</option>
+                <option value="Estudos">Estudos</option>
+                <option value="Saude">Saúde</option>
+            </select>
+        </section>
+        
+        <hr>
+
+        <section class="task-list" id="task-list">
+            </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

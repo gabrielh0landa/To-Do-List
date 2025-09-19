@@ -1,0 +1,136 @@
+
+:root {
+    --cor-primaria: #3498db; 
+    --cor-secundaria: #2ecc71; 
+    --cor-alerta: #e74c3c; 
+    --cor-aviso: #f39c12;
+    --cor-fundo: #f4f7f6;
+    --cor-texto: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+    margin-left: 5px; 
+}
+
+.task-management-form, .task-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+#save-task-btn {
+    background-color: var(--cor-primaria);
+}
+
+#save-task-btn.editing {
+    background-color: var(--cor-secundaria);
+}
+
+#cancel-edit-btn {
+    background-color: var(--cor-alerta);
+}
+
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-left: 5px solid; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.task-name {
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.task-info {
+    font-size: 0.9em;
+    color: #777;
+    margin-right: 20px;
+}
+
+.action-edit {
+    background-color: var(--cor-aviso);
+}
+
+.action-complete {
+    background-color: var(--cor-secundaria);
+}
+
+.action-complete[disabled] {
+    background-color: #ccc;
+}
+
+.action-delete {
+    background-color: var(--cor-alerta);
+}
+
+.status-pendente {
+    border-left-color: var(--cor-alerta);
+    background-color: #fffafa;
+}
+
+.status-concluida {
+    border-left-color: var(--cor-secundaria);
+    background-color: #f7fffb;
+    opacity: 0.8;
+}
+
+
+.task-management-form textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    width: 90%; 
+    min-height: 80px;
+}
+
+.task-management-form input[type="datetime-local"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+}
