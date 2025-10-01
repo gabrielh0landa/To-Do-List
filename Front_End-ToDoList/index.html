@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do_List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Lista de Tarefas:</h1>
+<main id="caixa-principal">
+
+    <section class="secoes">
+        <form id="criar-tarefa">
+
+            <div class="class-tarefa" id="div-tarefa-nome">
+                <label for="tarefa-nome">Nome da Tarefa:</label>
+                <input type="text" id="tarefa-nome">
+            </div>
+
+            <div class="class-tarefa" id="div-tarefa-descricao">
+                <label for="tarefa-descricao">Descrição:</label>
+                <textarea id="tarefa-descricao"></textarea>
+            </div>
+
+            <div class="class-tarefa" id="div-tarefa-datadetermino">
+                <label for="tarefa-data">Data de Término:</label>
+                <input type="datetime-local" id="tarefa-data">
+            </div>
+            
+            <div class="class-tarefa" id="div-tarefa-prioridade">
+                <label for="tarefa-prioridade">Nível de Prioridade:</label>
+                <select id="tarefa-prioridade">
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+            
+            <div class="class-tarefa" id="div-tarefa-status">
+                <label>Status:</label>
+                <div id="tarefa-status">
+                    <input type="radio" name="status" id="tarefa-todo" value="todo">
+                    <label for="tarefa-todo">A fazer</label>
+
+                    <input type="radio" name="status" id="tarefa-doing" value="doing">
+                    <label for="tarefa-doing">Fazendo</label>
+
+                    <input type="radio" name="status" id="tarefa-done" value="done">
+                    <label for="tarefa-done">Feito</label>
+                </div>
+            </div>
+
+            <button type="submit" id="botao-criar-tarefa">Criar Tarefa</button>
+        </form>
+    </section>
+
+    <section class="secoes">
+        <div id="listar-tarefa">
+            <ul>
+                <li>
+                    <input type="checkbox"> 
+                    <span>Estudar HTML Semântico</span> 
+                    <button>Excluir</button> 
+                    <button>Editar</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
